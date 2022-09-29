@@ -1,0 +1,28 @@
+{
+  "name": "fileserver-project",
+  "version": "1.0.0",
+  "description": "this module implements a file server project where http requests are used to remotely access files on our local machine",
+  "main": "Untitled-1.js",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "lodash": "^4.17.21",
+    "mime": "^3.0.0",
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Desmond5773"
+  },
+  "keywords": [
+    "fileserver"
+  ],
+  "author": "Ironde Desmond",
+  "license": "ISC"
+}

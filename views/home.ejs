@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>file server</title>
+    <link rel="stylesheet" href="../public/home.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/home" method="POST">
+        <Label for="remoteFiles">Select a file or directory here</Label>
+        <select name="remoteFiles"  value="fileServer.js" id="remoteFiles">
+            <option value="back">../</option>
+            <% for(let file of remoteFolder) { %>
+                <% if (file!='node_modules') { %>
+                    <option value=<%= file %>><%= file %> </option>
+                <% } %>
+            <% } %>
+        </select>
+        <br>
+       
+       
+        <% if (textArea && typeof(textArea)==='string') { %>
+          <textarea name="textArea" id="textArea" cols="40" rows="20" ><%= textArea.toString() %></textarea>
+        <% } %>
+        
+        <br>
+    
+    <button id="jump">open selection</button>
+    <button id="remove">delete</button>
+    <button id="put">save</button>
+    </form>
+
+    </div>
+    
+    
+    <script src="../public/config.js">
+    </script>
+</body>
+</html>
